@@ -1,0 +1,7 @@
+*.o
+*.s
+*.out
+*.exe
+stopwatch
+
+.vscode
