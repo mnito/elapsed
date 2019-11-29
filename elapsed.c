@@ -33,11 +33,11 @@ ELAPSED_TIMEPARTS ELAPSED_format_time_d(double seconds) {
     return ELAPSED_format_time((int) full_seconds, fractional);
 }
 
-u_int32_t ELAPSED_encode_formatted_time(ELAPSED_TIMEPARTS t) {
+uint32_t ELAPSED_encode_formatted_time(ELAPSED_TIMEPARTS t) {
     return ((t.h << 8 | t.m) << 8 | t.s) << 8 | t.f;
 }
 
-ELAPSED_TIMEPARTS ELAPSED_decode_formatted_time(u_int32_t v) {
+ELAPSED_TIMEPARTS ELAPSED_decode_formatted_time(uint32_t v) {
     ELAPSED_TIMEPARTS t;
 
     t.h = (v >> 24) & 255;
